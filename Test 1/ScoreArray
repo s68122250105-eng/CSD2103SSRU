@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ScoreArray {
+    public static void main(String[] args) {
+
+        Scanner kb = new Scanner(System.in);
+
+        int[] score = new int[5];
+        int total = 0;
+        double average;
+
+        for (int i = 0; i < score.length; i++) {
+            System.out.print("Enter score " + (i + 1) + ": ");
+            score[i] = kb.nextInt();
+            total += score[i];
+        }
+
+        average = (double) total / score.length;
+
+        System.out.println("Total score = " + total);
+        System.out.println("Average score = " + average);
+
+        kb.close();
+    }
+}
